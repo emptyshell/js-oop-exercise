@@ -3,6 +3,7 @@ import Footer from "./Footer.js";
 
 console.log('Loaded!');
 
+//todo create a product list
 //todo add product wrapper here
 
 const header = new Header("Some Shop");
@@ -10,5 +11,3 @@ const footer = new Footer("Valentin & Students @ Beetroot");
 
 document.body.appendChild(header.header());
 document.body.appendChild(footer.footer());
-
-
