@@ -2,15 +2,17 @@ export default class ProductsWrapper {
     #productList
 
     constructor(productList) {
-        if (productList instanceof List) {
-            this.#productList = productList
-        }
-
-        throw new Error("A list object type was expected!");
+        this.#productList = productList;
     }
 
-    listProducts() {
-        //todo Scrie logica acestei functii
-        // trebuie de parcurs lista si de creat instante de obiect care vor fi adaugate la documentul html
+    listProducts(container) {
+        const div = document.createElement('div');
+        div.className = "product-wrapper";
+
+        this.#productList.forEach(element => {
+            div.appendChild(element.createHTML());
+        });
+
+        container.appendChild(div);
     }
 }
